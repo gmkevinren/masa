@@ -100,11 +100,18 @@ geth attach ipc:$HOME/masa-node-v1.0/data/geth.ipc
 ```net.peerCount```
 
 **查看节点信息**
-```admin.nodeInfo```
+```
+admin.nodeInfo
+```
+
 **把id后的一串字符复制下来**
 **CTRL+D 关闭Geth终端**
+
 ** [填表申请激励](https://forms.gle/Z3P3Yaeodw88HPAA8)：https://forms.gle/Z3P3Yaeodw88HPAA8**
-### 提醒：记得保留运行日志！！
+
+**提醒：记得保留运行日志！！！**
+**提醒：记得保留运行日志！！！**
+**提醒：记得保留运行日志！！！**
 ### 其他链接：
 https://github.com/masa-finance/masa-node-v1.0
 
