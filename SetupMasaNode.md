@@ -89,7 +89,7 @@ journalctl -u masad -f -o cat
 ```
 **CTRL+C 关闭**
 
-**第三步，其他有用的命令，查看同步及申请激励**
+## 第三步，其他有用的命令，查看同步及申请激励**
 **Geth 终端运行**
 ```
 geth attach ipc:$HOME/masa-node-v1.0/data/geth.ipc
