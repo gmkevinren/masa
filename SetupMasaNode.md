@@ -113,6 +113,9 @@ geth attach ipc:/root/masa-node-v1.0/data/geth.ipc --exec web3.admin.nodeInfo |g
 
 **【填表申请激励】**：https://forms.gle/Z3P3Yaeodw88HPAA8
 
+**备份私钥：**： $HOME/masa-node-v1.0/data/geth/nodekey
+
+
 **提醒：记得保留运行日志！！！**
 
 **提醒：记得保留运行日志！！！**
