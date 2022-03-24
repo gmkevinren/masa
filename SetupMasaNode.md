@@ -95,26 +95,37 @@ journalctl -u masad -f -o cat
 geth attach ipc:$HOME/masa-node-v1.0/data/geth.ipc
 ```
 **在Geth终端内查看同步状态和种子数：**
+
 ```eth.syncing```
 
 ```net.peerCount```
 
+**CTRL+D 关闭Geth终端**
+
 **查看节点信息**
 ```
-admin.nodeInfo
+geth attach ipc:/root/masa-node-v1.0/data/geth.ipc --exec web3.admin.nodeInfo |grep enode
 ```
 
 **把id后的一串字符复制下来**
-**CTRL+D 关闭Geth终端**
 
-** [填表申请激励](https://forms.gle/Z3P3Yaeodw88HPAA8)：https://forms.gle/Z3P3Yaeodw88HPAA8**
+
+
+**【填表申请激励】**：https://forms.gle/Z3P3Yaeodw88HPAA8
 
 **提醒：记得保留运行日志！！！**
+
 **提醒：记得保留运行日志！！！**
+
 **提醒：记得保留运行日志！！！**
+
+**重要事情说三遍**
+
 ### 其他链接：
-https://github.com/masa-finance/masa-node-v1.0
+Github:https://github.com/masa-finance/masa-node-v1.0
 
-https://developers.masa.finance/docs
+文档：https://developers.masa.finance/docs
+
+Discord: https://discord.gg/NJKEFTmcaB
 
 
