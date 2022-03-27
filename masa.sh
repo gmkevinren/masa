@@ -1,26 +1,22 @@
 #!/bin/bash
 read -p "Enter your node name: " MASA_NODENAME
 
-#µÚÒ»²½£¬¸üÐÂºÍ°²×°ÒÀÀµ
-
+#ç¬¬ä¸€æ­¥ï¼Œæ›´æ–°å’Œå®‰è£…ä¾èµ–
 sudo apt update && sudo apt upgrade -y
-
-
-# °²×°ÒÀÀµ
+# å®‰è£…ä¾èµ–
 sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential git make ncdu net-tools -y
 
-
-# °²×°GO 1.17.2
+# å®‰è£…GO 1.17.2
 wget -c https://golang.org/dl/go1.17.2.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
 export PATH=$PATH:/usr/local/go/bin
 source ~/.profile
-#²âÊÔÊÇ·ñ°²×°³É¹¦:
+#æµ‹è¯•æ˜¯å¦å®‰è£…æˆåŠŸ:
 go version
 
-#¿ª·Å30300¶Ë¿Ú
+#å¼€æ”¾30300ç«¯å£
 ufw allow 30300
 
-µÚ¶þ²½£¬°²×°masa
+ç¬¬äºŒæ­¥ï¼Œå®‰è£…masa
 cd 
 rm -rf masa-node-v1.0
 git clone https://github.com/masa-finance/masa-node-v1.0
@@ -29,16 +25,16 @@ cd masa-node-v1.0/src
 git checkout v1.03
 make all
 
-#¸´ÖÆ¶þ½øÖÆÎÄ¼þ
+#å¤åˆ¶äºŒè¿›åˆ¶æ–‡ä»¶
 cd $HOME/masa-node-v1.0/src/build/bin
 sudo cp * /usr/local/bin
 
-#³õÊ¼»¯
+#åˆå§‹åŒ–
 cd $HOME/masa-node-v1.0
 geth --datadir data init ./network/testnet/genesis.json
 
 
-# ´´½¨·þÎñ
+# åˆ›å»ºæœåŠ¡
 
 tee $HOME/masad.service > /dev/null <<EOF
 [Unit]
@@ -72,11 +68,11 @@ EOF
 
 sudo mv $HOME/masad.service /etc/systemd/system
 
-#Æô¶¯·þÎñ
+#å¯åŠ¨æœåŠ¡
 sudo systemctl daemon-reload
 sudo systemctl enable masad
 sudo systemctl restart masad 
-#²é¿´ÈÕÖ¾
+#æŸ¥çœ‹æ—¥å¿—
 
 sleep 10s
 
