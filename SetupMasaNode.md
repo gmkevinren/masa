@@ -158,7 +158,7 @@ admin.addPeer("enode://93044a106ce0f77987414296b4954dff93cb2cd9ee4c4b6905f5d4f7d
 geth attach ipc:$HOME/masa-node-v1.0/data/geth.ipc --exec web3.admin.nodeInfo |grep enode | sed {s/127\.0\.0\.1/`curl -s 2ip.ru`/} | sed "s/^.*\"\(.*\)\".*$/\1/"
 ```
 
-**把enode id后的一串字符复制下来**
+**把整串字符（enode id）复制下来，然后点下面链接填表**
 
 
 **【填表申请激励】**：https://forms.gle/Z3P3Yaeodw88HPAA8
