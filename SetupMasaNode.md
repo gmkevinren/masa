@@ -104,7 +104,7 @@ geth attach ipc:$HOME/masa-node-v1.0/data/geth.ipc
 
 **查看节点信息**
 ```
-geth attach ipc:/root/masa-node-v1.0/data/geth.ipc --exec web3.admin.nodeInfo |grep enode
+geth attach ipc:$HOME/masa-node-v1.0/data/geth.ipc --exec web3.admin.nodeInfo |grep enode | sed {s/127\.0\.0\.1/`curl -s 2ip.ru`/} | sed "s/^.*\"\(.*\)\".*$/\1/"
 ```
 
 **把id后的一串字符复制下来**
